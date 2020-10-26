@@ -1,3 +1,27 @@
+:root {
+    --cool-green-dark: #118b69b4;
+    --cool-green: #00fcb6;
+    --cool-blue: steelblue;
+    --cool-black: #282c34;
+}
+
+.cool-black {
+  background-color: var(--cool-black);
+  color: white;
+}
+
+.cool-green {
+    color: var(--cool-green);
+}
+
+.cool-green-dark {
+    color: var(--cool-green-dark);
+}
+
+.cool-blue {
+    color: var(--cool-blue);
+}
+
 .App {
   text-align: center;
 }
@@ -6,8 +30,25 @@
   height: 40vmin;
 }
 
+.header {
+    min-height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: var(--cool-black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +59,13 @@
 }
 
 .App-link {
-  color: #09d3ac;
+  color: var(--cool-green);
+  cursor: pointer;
+}
+
+.App-link-dark {
+    color: var(--cool-green-dark);
+    cursor: pointer;
 }
 
 .about {
@@ -30,3 +77,29 @@
   font-size: calc(10px + 2vmin);
 }
 
+.rotate {
+    -webkit-transform: rotate(10deg);     /* Chrome and other webkit browsers */
+    -moz-transform: rotate(10deg);        /* FF */
+    -o-transform: rotate(10deg);          /* Opera */
+    -ms-transform: rotate(10deg);         /* IE9 */
+    transform: rotate(10deg);             /* W3C compliant browsers */
+
+    /* IE8 and below */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand');
+  }
+
+/* .pass-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 14px;
+}
+*/
+
+i:hover {
+  color: var(--cool-green);
+  cursor: pointer;
+}
+
+.no-select {
+  user-select: none;
+}
